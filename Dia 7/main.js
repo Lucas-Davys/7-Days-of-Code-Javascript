@@ -26,12 +26,12 @@ while (operacao != "Sair") {
 
   switch (operacao) {
     case "Somar":
-      numero1 = prompt("Insira o primeiro número.");
-      numero2 = prompt("Insira o segundo número");
+      numero1 = parseFloat(prompt("Insira o primeiro número."));
+      numero2 = parseFloat(prompt("Insira o segundo número"));
       resultado = somar(numero1, numero2);
       alert(`O resultado da operação é ${resultado}`);
       break;
-    case "Subtrair":
+      case "Subtrair":
       numero1 = prompt("Insira o primeiro número.");
       numero2 = prompt("Insira o segundo número");
       resultado = subtrair(numero1, numero2);

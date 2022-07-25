@@ -1,9 +1,7 @@
-//const frutas = ["pão", "tapioca"];
 let frutas = ["Macã", "Laranja", "Banana"];
 let laticinios = ["Iogurte", "Requeijão", "Queijo"];
 let congelados = ["Lasanha", "Nuggets", "Strogonoff"];
 let doces = ["Bolo", "Picolé", "Brigadeiro"];
-let array = [];
 
 let opcao;
 
@@ -36,81 +34,73 @@ while (opcao != "Não") {
     let elemento;
 
     if (categoria == "Frutas") {
-      array = frutas;
-
-      if (array.length == 0) {
+      if (frutas.length == 0) {
         // verifica se a lista está vazia
         alert("A lista está vazia.");
       } else {
         elemento = prompt(
-          `Frutas: ${array}.\nQual elemento você deseja remover?`
+          `Frutas: ${frutas}.\nQual elemento você deseja remover?`
         );
 
-        if (array.includes(elemento)) {
+        if (frutas.includes(elemento)) {
           // verifica se o item está incluído na lista
-          let posicao = array.indexOf(elemento);
+          let posicao = frutas.indexOf(elemento);
 
-          array.splice(posicao, 1);
+          frutas.splice(posicao, 1);
           alert(`O elemento ${elemento} foi removido da lista.`);
         } else {
           alert("Não foi possível encontrar o item dentro da lista!");
         }
       }
     } else if (categoria == "Laticínios") {
-      array = laticinios;
-
-      if (array.length == 0) {
+      if (laticinios.length == 0) {
         // verifica se a lista está vazia
         alert("A lista está vazia.");
       } else {
         elemento = prompt(
-          `Laticínios: ${array}.\nQual elemento você deseja remover?`
+          `Laticínios: ${laticinios}.\nQual elemento você deseja remover?`
         );
 
-        if (array.includes(elemento)) {
-          let posicao = array.indexOf(elemento);
+        if (laticinios.includes(elemento)) {
+          let posicao = laticinios.indexOf(elemento);
 
-          array.splice(posicao, 1);
+          laticinios.splice(posicao, 1);
           alert(`O elemento ${elemento} foi removido da lista.`);
         } else {
           alert("Não foi possível encontrar o item dentro da lista!");
         }
       }
     } else if (categoria == "Congelados") {
-      array = congelados;
-
-      if (array.length == 0) {
+      if (congelados.length == 0) {
         // verifica se a lista está vazia
         alert("A lista está vazia.");
       } else {
         elemento = prompt(
-          `Congelados: ${array}.\nQual elemento você deseja remover?`
+          `Congelados: ${congelados}.\nQual elemento você deseja remover?`
         );
 
-        if (array.includes(elemento)) {
-          let posicao = array.indexOf(elemento);
+        if (congelados.includes(elemento)) {
+          let posicao = congelados.indexOf(elemento);
 
-          array.splice(posicao, 1);
+          congelados.splice(posicao, 1);
           alert(`O elemento ${elemento} foi removido da lista.`);
         } else {
           alert("Não foi possível encontrar o item dentro da lista!");
         }
       }
     } else if (categoria == "Doces") {
-      array = doces;
-
-      if (array.length == 0) {
+      if (doces.length == 0) {
         // verifica se a lista está vazia
         alert("A lista está vazia.");
       } else {
         elemento = prompt(
-          `Doces: ${array}.\nQual elemento você deseja remover?`
+          `Doces: ${doces}.\nQual elemento você deseja remover?`
         );
 
-        if (array.includes(elemento)) {
-          let posicao = array.indexOf(elemento);
+        if (doces.includes(elemento)) {
+          let posicao = doces.indexOf(elemento);
 
-          array.splice(posicao, 1);
+          doces.splice(posicao, 1);
           alert(`O elemento ${elemento} foi removido da lista.`);
         } else {
           alert("Não foi possível encontrar o item dentro da lista!");
@@ -120,12 +110,14 @@ while (opcao != "Não") {
       alert("Opção inválida!");
     }
   } else if (opcao == "Não") {
-    alert(`Lista de compras: 
-        Frutas: ${frutas}
-        Laticínios: ${laticinios}
-        Congelados: ${congelados}
-        Doces: ${doces}`);
+    break
   } else {
     alert("Opção inválida!");
   }
 }
+
+alert(`Lista de compras: 
+  Frutas: ${frutas}
+  Laticínios: ${laticinios}
+  Congelados: ${congelados}
+  Doces: ${doces}`);

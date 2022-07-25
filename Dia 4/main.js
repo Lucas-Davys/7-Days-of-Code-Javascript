@@ -1,14 +1,15 @@
-let numero = Math.floor(Math.random() * 10 + 1);
+let numero = Math.floor(Math.random() * (10 - 0 + 1) + 1);
 
-let palpite = prompt("Escolha um número de 1 a 10");
+let palpite = prompt("Escolha um número de 0 a 10");
 let tentativas = 3;
 
 while (tentativas > 0) {
+  tentativas--;
+
   if (palpite == numero) {
     alert("Parabéns, você acertou!");
     break;
   } else {
-    tentativas--;
 
     if (tentativas > 0) {
       if (tentativas != 1) {

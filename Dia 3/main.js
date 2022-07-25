@@ -6,7 +6,7 @@ if (area == "Front-End") {
     prompt("Você quer aprender C# ou Java?");
 }
 
-const especializacao = prompt(`Você quer seguir se especializando na área de ${area} ou quer seguir se desenvolvendo para se tornar Fullstack?`)
+const especializacao = prompt(`Você quer seguir se especializando na área de ${area} ou quer seguir se desenvolvendo para se tornar Fullstack?\nEscolha "${area}" ou "Fullstack".`)
 
 if (especializacao == area) {
     alert(`Você vai entender cada vez mais sobre ${area}!`);
@@ -14,15 +14,13 @@ if (especializacao == area) {
     alert("Você vai conhecer o melhor dos dois mundos!");
 }
 
-const pergunta = "Quantas outras tecnologias a mais você gostaria de aprender?";
-const resposta = prompt(pergunta);
+let resposta = prompt('Tem mais alguma outra tecnologia que você gostaria de aprender?\nDigite "Sim" ou "Não"');
 
-let contador = 0;
+while (resposta == "Sim") {
+    let tecnologia = prompt("Que outra tecnologia que você gostaria de aprender?");
+    alert(`${tecnologia} é uma tecnologia muito interessante!`);
 
-while (contador < resposta) {
-    const tecnologia = prompt("Que outra tecnologia que você gostaria de aprender?");
-    alert(`${tecnologia} é uma tecnologia muito interessante!`)
-    contador += 1;
+    resposta = prompt('Tem mais alguma outra tecnologia que você gostaria de aprender?\nDigite "Sim" ou "Não"');
 }
 
 alert("Bons estudos!")
